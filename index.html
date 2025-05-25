@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karas Coin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .coin-counter {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    .level {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .progress-bar-container {
+      width: 100%;
+      background: #444;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #ffcc00;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background: #ffcc00;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Karas Coin 🐟</h1>
+  <div class="level">Level: <span id="romanLevel">I</span></div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <div class="coin-counter"><span id="coinCount">0</span> KRSC</div>
+  <button onclick="collectCoin()">Collect Coin 💰</button>
+
+  <!-- Telegram WebApp SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js "></script>
+  <script src="script.js"></script>
+</body>
+</html>
